@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Logged in page</h1>
+    {% if image_url %}
+    <img src="{{ image_url }}" alt="{{ username }}'s Image">
+    {% endif %}
+    <h2>Clubs:</h2>
+    {% for club in clubs %}
+    <div>
+        <h2>{{ club.name }}</h2>
+        <p>{{ club.description }}</p>
+        <img src="{{ club.logo.url }}" alt="{{ club.name }} logo">
+    </div>
+{% endfor %}
+</body>
+</html>
